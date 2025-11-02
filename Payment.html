@@ -197,8 +197,52 @@
     </div>
 
     <a href="https://wa.me/+2348081190296?text=Hello+I+want+to+register+for+FortuneX" class="btn">I Have Paid – Confirm on WhatsApp</a>
+    <a href="https://t.me/FortuneX_official?text=Hello!%20FortuneX%20Vendor,%20I%20want%20to%20register%20on%20FortuneX" class="btn">I Have Paid - Confirm on telegram</a>
     <a href="https://wa.me/+2348081190296?text=Hello+I+want+to+register+for+FortuneX" class="btn" style="margin-top:10px;background:#fff;color:#000;">Need Help? Chat Admin</a>
   </div>
+  
+  <div class="text">
+     After payment, tap on "Whatsapp or telegram " we'll verify and activate your access within few minutes.
+  </div>
+  
+   <div class="timer">Time left to use this account: <span id="countdown">60:00</span></div>
+
+<style>
+  .timer {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+    color: red;
+    font-size: 18px;
+  }
+</style>
+
+<script>
+  let timeLeft = 60 * 60; // 60 minutes = 3600 seconds
+
+  const countdownElement = document.getElementById("countdown");
+
+  function updateTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+    // Format as MM:SS
+    countdownElement.textContent =
+      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    if (timeLeft > 0) {
+      timeLeft--;
+    } else {
+      clearInterval(timerInterval);
+      countdownElement.textContent = "00:00";
+      alert("Your time has expired!");
+      // Optional: add any action you want after timer ends
+    }
+  }
+
+  updateTimer(); // Initialize display immediately
+  const timerInterval = setInterval(updateTimer, 1000);
+</script>
 
   <div class="testimonial" id="testimonialBox">
     “Got credited instantly after making payment. Super fast and verified!”
