@@ -177,17 +177,17 @@
     </div>
 
     <div class="copy-box" onclick="copyText('bankName')">
-      <span><strong>Bank Name:</strong> <span id="bankName">Fair Money</span></span>
+      <span><strong>Bank Name:</strong> <span id="bankName">PALMPAY</span></span>
       <i class="fa-solid fa-copy"></i>
     </div>
 
     <div class="copy-box" onclick="copyText('accountNumber')">
-      <span><strong>Account Number:</strong> <span id="accountNumber">2008137589</span></span>
+      <span><strong>Account Number:</strong> <span id="accountNumber">9042332785</span></span>
       <i class="fa-solid fa-copy"></i>
     </div>
 
     <div class="copy-box" onclick="copyText('accountName')">
-      <span><strong>Account Name:</strong> <span id="accountName">PEACE EZEH </span></span>
+      <span><strong>Account Name:</strong> <span id="accountName"> EMMANUEL EZE </span></span>
       <i class="fa-solid fa-copy"></i>
     </div>
 
@@ -314,6 +314,119 @@
   setInterval(rotateTestimonials, 5000);
 </script>
 
+  <!-- Popup Modal -->  
+    <div class="modal" id="paymentModal">  
+    <div class="modal-content">  
+      <span class="close-btn" id="closeModal">&times;</span>  
+      <h3><span>⚠️</span> PAYMENT WARNING:</h3>  
+      <p>  
+        AVOID USING OPAY BANK FOR YOUR PAYMENT.<br><br>  
+        This can lead to delays in verifying your payment and also affect your withdrawal.   
+        (FortuneX accepts only Palmpay, Moniepoint, POS and all other banks except OPAY).  
+      </p>  
+      <button class="ack-btn" id="acknowledgeBtn">Acknowledged</button>  
+    </div>  
+  </div>    <script>  
+    // Show warning popup on load  
+    window.onload = function() {  
+      document.getElementById('paymentModal').classList.add('active');  
+    };  
+  
+    document.getElementById('closeModal').onclick = function() {  
+      document.getElementById('paymentModal').classList.remove('active');  
+    };  
+  
+    document.getElementById('acknowledgeBtn').onclick = function() {  
+      document.getElementById('paymentModal').classList.remove('active');  
+    };
+    </script>
+    <style>
+            /* Modal Popup */  
+    .modal {  
+      position: fixed;  
+      top: 0;  
+      left: 0;  
+      width: 100%;  
+      height: 100%;  
+      background: rgba(0,0,0,0.6);  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      visibility: hidden;  
+      opacity: 0;  
+      transition: 0.3s;  
+    }  
+  
+    .modal.active {  
+      visibility: visible;  
+      opacity: 1;  
+    }  
+  
+    .modal-content {  
+      background: white;  
+      padding: 25px;  
+      border-radius: 15px;  
+      max-width: 350px;  
+      width: 90%;  
+      text-align: left;  
+      position: relative;  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+    }  
+  
+    .modal-content h3 {  
+      color: red;  
+      font-weight: 700;  
+      display: flex;  
+      align-items: center;  
+      font-size: 16px;  
+    }  
+  
+    .modal-content h3 span {  
+      margin-right: 8px;  
+      font-size: 20px;  
+    }  
+  
+    .modal-content p {  
+      font-size: 14px;  
+      line-height: 1.6;  
+      color: #333;  
+    }  
+  
+    .close-btn {  
+      position: absolute;  
+      top: 10px;  
+      right: 15px;  
+      font-size: 22px;  
+      font-weight: bold;  
+      color: #444;  
+      cursor: pointer;  
+      transition: 0.2s;  
+    }  
+  
+    .close-btn:hover {  
+      color: red;  
+    }  
+  
+    .ack-btn {  
+      display: block;  
+      width: 100%;  
+      background: linear-gradient(90deg, #ff3c00, #d30000);  
+      color: white;  
+      border: none;  
+      padding: 12px;  
+      border-radius: 10px;  
+      font-weight: 600;  
+      text-align: center;  
+      cursor: pointer;  
+      transition: 0.3s;  
+    }  
+  
+    .ack-btn:hover {  
+      transform: scale(1.03);  
+    }  
+  
+  </style>
+    </style>
 
 </body>
-</html>
+      </html>
